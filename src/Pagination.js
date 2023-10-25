@@ -27,9 +27,10 @@ const Pagination = () => {
       .then((response) => setData(response.data))
       .catch((err) => console.log(err));
   };
-   //console.log("-----",data);
    const indexOfLastItem = currentPage * itemsPerPage;
+   console.log("indexOfLastItem",indexOfLastItem);
    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+   console.log("indexOfFirstItem",indexOfFirstItem);
    const currentData = data? data.slice(indexOfFirstItem, indexOfLastItem):[];
  
 
