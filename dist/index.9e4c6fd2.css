@@ -1,0 +1,126 @@
+#heading {
+  color: red;
+}
+
+.header {
+  background-color: #f7dfe3;
+  border: 1px solid #000;
+  justify-content: space-between;
+  display: flex;
+}
+
+.logo {
+  width: 200px;
+}
+
+.nav-items {
+  padding: 1px 40px;
+}
+
+.nav-items > ul {
+  font-size: 24px;
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-items > ul > li {
+  margin: 10px;
+  margin-top: inherit;
+  padding: 10px;
+}
+
+.res-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.res-cart {
+  background-color: #f08080;
+  width: 300px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.res-cart:hover {
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.search {
+  padding: 10px;
+}
+
+.social-logo {
+  width: 100%;
+  height: 100px;
+}
+
+.filter-btn {
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+}
+
+.shimmer-cards {
+  background-color: #d3d3d3;
+  width: 200px;
+  height: 400px;
+  margin: 20px;
+}
+
+.shimmer-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.login-btn {
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+.filter {
+  display: flex;
+}
+
+.User-card {
+  color: green;
+  padding: 10px;
+}
+
+.label-veg {
+  color: #fff;
+  background-color: #000;
+  margin: 8px;
+  padding: 8px;
+  position: absolute;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #000;
+}
+
+.table-main {
+  table-layout: fixed;
+  margin: 10px;
+  padding: 10px;
+}
+
+th, td {
+  text-align: center;
+  border: solid #000;
+  margin: 10px;
+  padding: 10px;
+}
+
+thead {
+  color: #fff;
+  background-color: #f08080;
+}
+
+.search-btn, .reset-btn {
+  margin: 10px;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=index.9e4c6fd2.css.map */
