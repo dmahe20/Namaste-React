@@ -13,7 +13,7 @@ const DebouncingSecond = () =>{
             if(timer) clearTimeout(timer);
             timer = setTimeout(() => {
                 timer = null;
-                func.apply(context,args);
+                func.apply(this,args);
             },500);
         }
     }
