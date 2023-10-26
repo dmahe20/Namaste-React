@@ -8,7 +8,28 @@
 </head>
 <body>
     <div id="root">
-        <h1>Darshana is here</h1>
+        <h1>Darshana here</h1>
+        <!-- This is for bubbing and capturing -->
+        <!-- <div id="grandparent">
+            <div id="parent">
+                <div id="child">
+    
+                </div>
+            </div>
+        </div> -->
+
+        <!-- This if for event delegation  -->
+            <ul  id="categories">
+                <li id="laptops">
+                    laptops
+                </li>
+                <li id="cameras">
+                    camera
+                </li>
+                <li id="shoes">
+                    shoes
+                </li>
+            </ul>
     </div>
        <!-- <script>
        const heading =  document.createElement("h1");
@@ -26,7 +47,16 @@
        <script 
        crossorigin 
        src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
-
-       <script type="module" src="./src/Pagination.js"></script>
+       <style>
+        div{
+            min-width: 100px;
+            min-height: 100px;
+            margin: 30px;
+            padding: 30px;
+            border: 1px solid black;
+        }
+       </style>
+      
+       <script type="module" src="./src/Javascript/EventDelegation.js"></script>
 </body>
 </html>
