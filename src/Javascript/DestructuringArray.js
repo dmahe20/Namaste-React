@@ -6,3 +6,8 @@ function display(){
     const {collection : [,{name:secondObject,}] } = exampleObject;
     console.log(secondObject) //this line should display the correct answer
   }
+
+  function removeFirstTwo(list) {
+    const [, , ...arr] = list;
+    return arr
+  } 
