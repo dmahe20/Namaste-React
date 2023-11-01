@@ -27,3 +27,17 @@ function curry(callback){
     };
     return curriedVersion;
 }
+
+//another example 
+function currying(func) {
+    function curriedfunc(...args) {
+        if(args.length >= func.length) {
+            return func(...args);
+        } else {
+            return function(...next) {
+                return curriedfunc(...args,...next);
+            }
+        }
+    }
+    return curriedfunc;
+}

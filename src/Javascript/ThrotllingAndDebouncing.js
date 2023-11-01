@@ -64,3 +64,60 @@ const ThrotllingAndDebouncing = () => {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<ThrotllingAndDebouncing />);
 export default ThrotllingAndDebouncing;
+
+
+//Polyfill for debouncing nd throtling
+
+debounce 
+function debounce(callback, delay, immediate = false) {//higher order function which returns functions
+    let timerId;
+    
+    return function(...args){
+      clearTimeout(timerId);
+  
+      const shouldCallImmediate = timerId == null && immediate;
+      if(shouldCallImmediate){
+        callback.apply(this,args);
+      }
+      
+      timerId =  setTimeout(()=>{
+        if(!immediate){
+       callback.apply(this, args);
+        }
+        timerId = null;
+     }, delay);
+    }
+  }
+  
+  // Do not edit the line below.
+  exports.debounce = debounce;
+
+  //throtling
+  function throttle(callback, delay) {
+    let lastCalledTime = 0;
+    let timerId;
+    const throttledFunction = function(...args){
+      const currentTime = Date.now();
+      const timeSinceLastCall = currentTime - lastCalledTime;
+      const delayRemaining = delay - timeSinceLastCall;
+      
+      if(delayRemaining <=0 ){
+        lastCalledTime = currentTime;
+        callback.apply(this, args);
+      }else{
+        clearTimeout(timerId)
+        timerId = setTimeout(()=>{
+          lastCalledTime = Date.now();
+          callback.apply(this, args);
+        }, delayRemaining);
+      }
+    };
+    throttledFunction.cancel = function(){
+      clearTimeout(timerId);
+    };
+    return throttledFunction;
+  }
+  
+  // Do not edit the line below.
+  exports.throttle = throttle;
+  
