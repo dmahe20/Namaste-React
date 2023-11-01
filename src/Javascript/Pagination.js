@@ -15,6 +15,25 @@ const Pagination = () => {
     fetchData();
   }, [setData]);
 
+  const SampleData = [
+    {
+      "id": 1,
+      "firstname": "John",
+      "lastname": "Doe",
+      "email": "johndoe@example.com",
+      "birthDate": "1973-01-22",
+      "address": {
+        "street": "123 Main Street",
+        "suite": "Apt. 4",
+        "city": "Anytown",
+        "zipcode": "12345-6789",
+        "geo": {
+          "lat": "42.1234",
+          "lng": "-71.2345"
+        }
+      },
+      "phone": "(555) 555-1234"
+    }]
   // const fetchData = async () =>{
   //     const data =await fetch('https://jsonplaceholder.typicode.com/posts');
   //     const json = await data.json();
